@@ -1901,6 +1901,29 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
+      },
+      "PaymentContext.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "PaymentContext.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PaymentContext.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PaymentContext.Domain.dll": {}
+        }
+      },
+      "PaymentContext.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/PaymentContext.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PaymentContext.Shared.dll": {}
+        }
       }
     }
   },
@@ -6761,6 +6784,16 @@
         "system.xml.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xmldocument.nuspec"
       ]
+    },
+    "PaymentContext.Domain/1.0.0": {
+      "type": "project",
+      "path": "../PaymentContext.Domain/PaymentContext.Domain.csproj",
+      "msbuildProject": "../PaymentContext.Domain/PaymentContext.Domain.csproj"
+    },
+    "PaymentContext.Shared/1.0.0": {
+      "type": "project",
+      "path": "../PaymentContext.Shared/PaymentContext.Shared.csproj",
+      "msbuildProject": "../PaymentContext.Shared/PaymentContext.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6768,6 +6801,8 @@
       "MSTest.TestAdapter >= 2.2.10",
       "MSTest.TestFramework >= 2.2.10",
       "Microsoft.NET.Test.Sdk >= 17.3.2",
+      "PaymentContext.Domain >= 1.0.0",
+      "PaymentContext.Shared >= 1.0.0",
       "coverlet.collector >= 3.1.2"
     ]
   },
@@ -6795,7 +6830,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/ebd/ebd/baltaio/BackEndCourse/RichDomainModeling/PaymentContext/PaymentContext.Domain/PaymentContext.Domain.csproj": {
+              "projectPath": "/home/ebd/ebd/baltaio/BackEndCourse/RichDomainModeling/PaymentContext/PaymentContext.Domain/PaymentContext.Domain.csproj"
+            },
+            "/home/ebd/ebd/baltaio/BackEndCourse/RichDomainModeling/PaymentContext/PaymentContext.Shared/PaymentContext.Shared.csproj": {
+              "projectPath": "/home/ebd/ebd/baltaio/BackEndCourse/RichDomainModeling/PaymentContext/PaymentContext.Shared/PaymentContext.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
