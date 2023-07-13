@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YHuRRGTt5h7myA/csjwijed0baHvHgal3fT+myZ3GsuBRcsWfZRAu1vQ3GF9VYX4SOKqTah2DbmE8+zdXUMMrg==",
+  "dgSpecHash": "sG+opfG1+jRgMop8QhwcDNvUifWO+0b6mRf0JdjQ7bA4CX8FcuIzNSsuNkTJ6jhiFTIToeLY/o1Dy7dnISSQ7A==",
   "success": true,
   "projectFilePath": "/home/ebd/ebd/baltaio/BackEndCourse/RichDomainModeling/PaymentContext/PaymentContext.Domain/PaymentContext.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/ebd/.nuget/packages/flunt/2.0.5/flunt.2.0.5.nupkg.sha512"
+  ],
   "logs": []
 }
