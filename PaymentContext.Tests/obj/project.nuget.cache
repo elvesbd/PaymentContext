@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "BK9r6u9fr9cuNUlOdKO9+tVaNQpwISNuS/fypSgBSl/K99Q3VzxMQKTrWCbqF8yvDEcve7kfmygp69jOv9oFWw==",
+  "dgSpecHash": "Btju9bOXq91Cjen3JEC+BEgqKQnTz0ZHSG76Y+hsbH2Gq2jdpVgqTWd80roqiTeTg8UKNRCCFoBOdR7fbwj4EQ==",
   "success": true,
   "projectFilePath": "/home/ebd/ebd/baltaio/BackEndCourse/RichDomainModeling/PaymentContext/PaymentContext.Tests/PaymentContext.Tests.csproj",
   "expectedPackageFiles": [
     "/home/ebd/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
+    "/home/ebd/.nuget/packages/flunt/2.0.5/flunt.2.0.5.nupkg.sha512",
     "/home/ebd/.nuget/packages/microsoft.codecoverage/17.3.2/microsoft.codecoverage.17.3.2.nupkg.sha512",
     "/home/ebd/.nuget/packages/microsoft.csharp/4.3.0/microsoft.csharp.4.3.0.nupkg.sha512",
     "/home/ebd/.nuget/packages/microsoft.net.test.sdk/17.3.2/microsoft.net.test.sdk.17.3.2.nupkg.sha512",
