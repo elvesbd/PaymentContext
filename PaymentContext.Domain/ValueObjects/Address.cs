@@ -18,16 +18,15 @@ public class Address : ValueObject
         AddNotifications(new Contract<Address>()
             .Requires()
             .IsGreaterThan(Street, 5, "Address.Street", "Street must contain at greater than 3 characters")
-            .IsLowerThan(Street, 10, "Address.Street", "Street must contain at greater than 10 characters")
             .IsGreaterThan(Number, 1, "Address.Number", "Number must contain at greater than 3 characters")
             .IsLowerThan(Number, 10, "Address.Number", "Number must contain a lower than 40 characters")
             .IsGreaterThan(Neighborhood, 3, "Address.Neighborhood", "Neighborhood must contain at greater than 3 characters")
             .IsGreaterThan(City, 3, "Address.City", "City must contain at greater than 3 characters")
-            .IsGreaterThan(State, 2, "Address.State", "State must contain at greater than 2 characters")
-            .IsLowerThan(State, 2, "Address.State", "State must contain at greater than 2 characters")
+            .IsGreaterOrEqualsThan(State, 2, "Address.State", "State must contain at greater than 2 characters")
+            .IsLowerOrEqualsThan(State, 2, "Address.State", "State must contain at greater than 2 characters")
             .IsGreaterThan(Country, 3, "Address.Country", "Country must contain at greater than 3 characters")
-            .IsGreaterThan(ZipCode, 3, "Address.ZipCode", "ZipCode must contain at greater than 3 characters")
-            .IsLowerThan(ZipCode, 8, "Address.ZipCode", "ZipCode must contain at greater than 8 characters")
+            .IsGreaterOrEqualsThan(ZipCode, 3, "Address.ZipCode", "ZipCode must contain at greater than 3 characters")
+            .IsLowerOrEqualsThan(ZipCode, 8, "Address.ZipCode", "ZipCode must contain at greater than 8 characters")
         );
     }
 
