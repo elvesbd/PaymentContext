@@ -23,9 +23,18 @@ public class Student : Entity
     public IReadOnlyCollection<Subscription> Subscriptions { get { return _subscriptions.ToArray(); } }
     public void AddSubscription(Subscription subscription)
     {
-        foreach (var sub in Subscriptions)
-            sub.Deactivate();
+        var hasSubscriptionActive = false;
+        foreach (var sub in _subscriptions)
+        {
+            if (sub.Active)
+                hasSubscriptionActive = true;
+        }
 
-        _subscriptions.Add(subscription);
+        /* AddNotifications(new Contract<Subscription>()
+            .Requires()
+            .IsFalse(hasSubscriptionActive, "Student.Subscriptions", "you already have an active subscription")
+        ); */
+        if (hasSubscriptionActive)
+            AddNotification("Student.Subscriptions", "you already have an active subscription");
     }
 }
