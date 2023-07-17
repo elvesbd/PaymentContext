@@ -1,8 +1,11 @@
+using Flunt.Notifications;
+using Flunt.Validations;
 using PaymentContext.Domain.Enums;
+using PaymentContext.Shared.Commands;
 
 namespace PaymentContext.Domain.Commands;
 
-public class CreateBoletoSubscriptionCommand
+public class CreateBoletoSubscriptionCommand : Notifiable<Notification>, ICommand
 {
     public string? FirstName { get; set; }
     public string? LastName { get; set; }
@@ -26,4 +29,14 @@ public class CreateBoletoSubscriptionCommand
     public string? State { get; set; }
     public string? Country { get; set; }
     public string? ZipCode { get; set; }
+
+    public void Validate()
+    {
+        AddNotifications(new Contract<CreateBoletoSubscriptionCommand>()
+            .Requires()
+            .IsGreaterThan(FirstName, 3, "Name.FirstName", "FirstName must contain at greater than 3 characters")
+            .IsLowerThan(FirstName, 40, "Name.FirstName", "FirstName must contain a lower than 40 characters")
+            .IsGreaterThan(LastName, 3, "Name.LastName", "LastName must contain at greater than 3 characters")
+        );
+    }
 }
