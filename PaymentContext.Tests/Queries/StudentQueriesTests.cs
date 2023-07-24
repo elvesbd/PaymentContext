@@ -30,4 +30,13 @@ public class StudentQueriesTests
 
         Assert.AreEqual(null, student);
     }
+
+    [TestMethod]
+    public void ShouldReturnStudentWhenDocumentExists()
+    {
+        var exp = StudentQueries.GetStudentInfo("11111111111");
+        var student = _students?.AsQueryable().Where(exp).FirstOrDefault();
+
+        Assert.AreNotEqual(null, student);
+    }
 }
